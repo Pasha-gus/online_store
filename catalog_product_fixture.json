@@ -1,0 +1,80 @@
+[
+{
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+        "name": "Телефон1",
+        "description": "Описание телефона1",
+        "image": "",
+        "category": 1,
+        "purchase_price": 150000,
+        "created_at": null,
+        "updated_at": null
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+        "name": "Телефон2",
+        "description": "Описание телефона2",
+        "image": "",
+        "category": 1,
+        "purchase_price": 50000,
+        "created_at": null,
+        "updated_at": null
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+        "name": "Телевизор1",
+        "description": "Описание телевизора1",
+        "image": "",
+        "category": 2,
+        "purchase_price": 100000,
+        "created_at": null,
+        "updated_at": null
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+        "name": "Телевизор2",
+        "description": "Описание телевизора2",
+        "image": "",
+        "category": 2,
+        "purchase_price": 200000,
+        "created_at": null,
+        "updated_at": null
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+        "name": "Наушники1",
+        "description": "Описание наушников1",
+        "image": "",
+        "category": 3,
+        "purchase_price": 10000,
+        "created_at": null,
+        "updated_at": null
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 7,
+    "fields": {
+        "name": "Наушники2",
+        "description": "Описание наушников2",
+        "image": "",
+        "category": 3,
+        "purchase_price": 5000,
+        "created_at": null,
+        "updated_at": null
+    }
+}
+]
