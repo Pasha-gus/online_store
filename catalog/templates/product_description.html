@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load my_tags %}
+{% block content %}
+<div class="col">
+            <div class="card">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="{{product.image | media_filter}}">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">{{product.name}}</h5>
+                    <p class="card-text">{{ product.description }}</p>
+                      <p class="card-text">{{ product.purchase_price }}</p>
+                      <p class="card-text">{{ product.created_at }}</p>
+                      <p class="card-text">{{ product.category_id }}</p>
+                    <p class="card-text"><small class="text-body-secondary">{{ product.updated_at }}</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </div>
+{% endblock %}
