@@ -1,23 +1,23 @@
 from django.shortcuts import render, get_object_or_404
+from django.views.generic import ListView, DetailView, TemplateView
+
 from .models import Product
 
 
-def home(request):
-    products = Product.objects.all()
-    for product in products:
-        if len(product.description) > 100:
-            product.short_description = product.description[:100] + '...'
-        else:
-            product.short_description = product.description
-    context = {"products": products}
-    return render(request, 'home.html', context)
+class ProductListView(ListView):
+    model = Product
 
 
-def contacts(request):
-    return render(request, 'contacts.html')
+class ProductDetailView(DetailView):
+    model = Product
 
 
-def product_description(request, product_id):
-    product = get_object_or_404(Product, pk=product_id)
-    context = {"product": product}
-    return render(request, 'product_description.html', context)
+class ContactView(TemplateView):
+    template_name = "catalog/contacts.html"
+
+
+# def contacts(request):
+#     return render(request, 'contacts.html')
+#
+#
+
