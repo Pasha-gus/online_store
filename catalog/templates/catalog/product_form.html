@@ -6,9 +6,9 @@
     {{ form.as_p }}
     <button class="btn btn-primary" type="submit">
         {% if object %}
-        Сохранить
-        {% else %}
         Обновить
+        {% else %}
+        Сохранить
         {% endif %}
     </button>
     <a class="btn btn-primary" href="{% url 'catalog:product_list' %}" role="button">Отмена</a>
