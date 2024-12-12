@@ -1,0 +1,23 @@
+{% extends 'catalog/base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-6 mx-auto">
+            <form class="row" method="post" enctype="multipart/form-data">
+                <div class="card">
+                     <h3 class="card-text mx-auto my-auto">
+                        Вы действительно хотите удалить продукт
+                    </h3>
+                    <div class="card-body">
+                        {% csrf_token %}
+                    </div>
+                    <button type="submit" class="btn btn-primary mx-auto my-auto col-6 mt-2 mb-2">
+                        Удалить
+                    </button>
+                    <a class="btn btn-primary mx-auto my-auto col-6" href="{% url 'catalog:product_list' %}" role="button">Отмена</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
