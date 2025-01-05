@@ -19,7 +19,7 @@ class ProductForm(StyleFormMixin, ModelForm):
 
     class Meta:
         model = Product
-        exclude = ("updated_at",)
+        exclude = ("updated_at", "publication_status", "owner")
 
     def clean_name(self):
         name = self.cleaned_data.get("name")
@@ -40,3 +40,12 @@ class ProductForm(StyleFormMixin, ModelForm):
         if price is not None and price <= 0:
             raise ValidationError("Цена не может быть отрицательной или равной 0.")
         return price
+
+
+class ProductModeratorForm(StyleFormMixin, ModelForm):
+    FORBIDDEN_WORDS = ["казино", "криптовалюта", "крипта", "биржа", "дешево", "бесплатно", "обман", "полиция",
+                       "радар"]
+
+    class Meta:
+        model = Product
+        exclude = ("name", "description", "image", "category", "purchase_price", "created_at", "updated_at", "owner")
