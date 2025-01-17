@@ -1,8 +1,7 @@
-{% extends 'catalog/base.html' %}
-
+{% extends 'catalog/base.html'%}
 {% block content %}
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <h1 class="display-4">Skystore</h1>
+    <h1 class="display-4">{{ category.name }}</h1>
 </div>
 
 <div class="container">
@@ -30,14 +29,6 @@
             </div>
         </div>
         {% endfor %}
-        <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4 text-center">
-                <a class="btn btn-primary mx-auto text-center" href="{% url 'catalog:product_create' %}" role="button">Создать</a>
-                <a class="btn btn-primary mx-auto text-center" href="{% url 'catalog:category_list' %}" role="button">Категории</a>
-            </div>
-            <div class="col-4"></div>
-        </div>
     </div>
 </div>
 {% endblock %}
