@@ -1,0 +1,17 @@
+{% extends 'catalog/base.html' %}
+{% block content %}
+<div class="container">
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-primary" type="submit">
+        {% if object %}
+        Обновить
+        {% else %}
+        Сохранить
+        {% endif %}
+    </button>
+    <a class="btn btn-primary" href="{% url 'catalog:product_list' %}" role="button">Отмена</a>
+</form>
+</div>
+{% endblock %}
